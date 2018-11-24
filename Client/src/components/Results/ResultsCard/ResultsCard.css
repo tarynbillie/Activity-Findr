@@ -1,0 +1,100 @@
+.resultsCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 225px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 55px;
+  border-radius: 3px;
+  background-color: white;
+  -webkit-box-shadow: 0px 8px 25px 5px rgba(107, 106, 106, 0.12);
+          box-shadow: 0px 8px 25px 5px rgba(107, 106, 106, 0.12);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.resultsCard__image {
+  height: auto;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 250px;
+}
+
+.resultsCard__image--placeholder {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resultsCard__logo--logoIcon {
+  font-size: 20px;
+  margin-right: 15px;
+  color: white;
+}
+
+.resultsCard__logo--logoText {
+  color: white;
+}
+
+.resultsCard__info {
+  width: calc(100% - (315px + 15px));
+  padding: 20px;
+}
+
+.resultsCard__business {
+  margin-bottom: 20px;
+}
+
+.resultsCard__ratings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resultsCard__contact {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.resultsCard__stars {
+  margin-right: 5px;
+}
+
+.resultsCard__price {
+  margin-right: 5px;
+}
+
+.resultsCard__contactInfo {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.resultsCard:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+/*# sourceMappingURL=ResultsCard.css.map */

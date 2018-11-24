@@ -1,0 +1,31 @@
+.filterDropDown {
+    border-bottom: 1px solid gainsboro;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 50px;
+  &__form {
+    width: 100%;
+    display: flex;
+  }
+  &__sortBy {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__inputHighest {
+    &:hover {
+      color: grey;
+    }
+  }
+  &__inputLowest {
+    &:hover {
+      color: grey;
+    }
+  }
+  &__inputMoreCategories {
+    &:hover {
+      color: grey;
+    }
+  }
+}

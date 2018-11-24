@@ -1,0 +1,163 @@
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.main {
+  z-index: 0;
+  background-image: url("../Soccer.png");
+  background-size: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 116vh;
+}
+
+.main__form-card {
+  height: 36rem;
+  width: 7rem;
+  background-color: white;
+  -webkit-box-shadow: 0 24px 32px 0 rgba(0, 0, 0, 0.29);
+          box-shadow: 0 24px 32px 0 rgba(0, 0, 0, 0.29);
+  border-radius: 8px;
+  margin: 7rem 25rem;
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 20;
+  position: absolute;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+}
+
+.main__form-card h1 {
+  padding-top: 4rem;
+  text-align: center;
+  color: black;
+  font-size: 2.5rem;
+}
+
+.main .categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 5rem;
+}
+
+.main .categories h4 {
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+  font-weight: normal;
+}
+
+.main .categories .activity-input {
+  width: 30rem;
+  height: 3rem;
+  border-radius: 2px;
+  border: 1px solid #EDEDED;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+  outline: none;
+  background-color: #fafafa;
+}
+
+.main .categories .location-input {
+  width: 30rem;
+  height: 3rem;
+  border-radius: 2px;
+  border: 1px solid #EDEDED;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+  outline: none;
+  background-color: #fafafa;
+}
+
+.main .categories .distance-select {
+  outline: none;
+  border: 1px solid #EDEDED;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+  background-color: #fafafa;
+  margin-right: 2rem;
+  width: 14rem;
+}
+
+.main .categories .price-select {
+  outline: none;
+  border: 1px solid #EDEDED;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+  background-color: #fafafa;
+  width: 14rem;
+}
+
+.main .categories .select-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .categories label {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.main .btns {
+  margin-left: 5rem;
+  padding-bottom: 2rem;
+}
+
+.main .btns .submit-btn {
+  width: 30rem;
+  height: 3rem;
+  border: none;
+  border-radius: 3px;
+  margin-top: 3rem;
+  background-color: black;
+  color: white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.main .btns .submit-btn:hover {
+  background-color: #1CA2F8;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.main .copy {
+  color: white;
+  position: absolute;
+  margin-top: 800px;
+  margin-left: 600px;
+}
+/*# sourceMappingURL=Home.css.map */

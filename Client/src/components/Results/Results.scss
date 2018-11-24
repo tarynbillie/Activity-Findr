@@ -1,0 +1,50 @@
+$primary: #FFD900;
+$accent: #1CA2F8;
+
+.results {
+  width: 65vw;
+  margin: 0 auto;
+  padding: 150px 0;
+  &__filterButton {
+    outline: none;
+    margin-bottom: 20px;
+  }
+  &__sliderLogo {
+    font-size: 20px;
+    color: black;
+    &:hover {
+      color: grey;
+    }
+  }
+  &__image {
+    height: auto;
+    object-position: center;
+    object-fit: cover;
+    width: 250px;
+    &--placeholder {
+      text-align: center;
+      width: 100%;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__noResult {
+    margin-bottom: 100px;
+  }
+  &__logoContainer {
+    display: flex;
+  }
+  &__logo {
+    &--logoIcon {
+      font-size: 20px;
+      margin-right: 15px;
+      color: $primary;
+    }
+    &--logoText {
+      color: black;
+    }
+  }
+}

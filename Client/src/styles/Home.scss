@@ -1,0 +1,121 @@
+$primary: #FFD900;
+$accent: #1CA2F8;
+$secondaryAccent: #EDEDED;
+$backgroundColor: #fafafa;
+
+@mixin btn {
+    width: 30rem;
+    height: 3rem;
+    border: none;
+    border-radius: 3px;
+    margin-top: 3rem;
+    background-color: black;
+    color: white;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+@mixin input {
+    width: 30rem;
+    height: 3rem;
+    border-radius: 2px;
+    border: 1px solid $secondaryAccent;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.15);
+    outline: none;
+    background-color: $backgroundColor;
+}
+
+@mixin select {
+    outline: none;
+    border: 1px solid $secondaryAccent;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.15);
+    background-color: $backgroundColor;
+}
+
+@keyframes fadein {
+    from { opacity: 0.3; }
+    to   { opacity: 1; }
+}
+
+.main {
+    z-index: 0;
+    background-image: url('../Soccer.png');
+    background-size: 100%;
+    object-fit: contain;
+    width: 100%;
+    height: 116vh;
+    &__form-card {
+        height: 36rem;
+        width: 7rem;
+        background-color: white;
+        box-shadow: 0 24px 32px 0 rgba(0,0,0,0.29);
+        border-radius: 8px;
+        margin: 7rem 25rem;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        z-index: 20;
+        position: absolute;
+        animation: fadein 2s;
+        h1 {
+            padding-top: 4rem;
+            text-align: center;
+            color: black;
+            font-size: 2.5rem;
+        }
+    }
+    .categories {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-left: 5rem;
+        h4 {
+            font-size: 1rem;
+            padding-bottom: 0.5rem;
+            font-weight: normal;
+        }
+        .activity-input {
+            @include input();
+        }
+        .location-input {
+            @include input();
+        }
+        .distance-select {
+            @include select();
+            margin-right: 2rem;
+            width: 14rem;
+        }
+        .price-select {
+            @include select();
+            width: 14rem;
+        }
+        .select-row {
+            display: flex;
+        }
+        label {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 2rem;
+        }
+    }
+    .btns {
+        margin-left: 5rem;
+        padding-bottom: 2rem;
+        .submit-btn {
+            @include btn();
+            &:hover {
+                background-color: $accent;
+                transform: scale(1.05);
+            }
+        }
+    }
+    .copy {
+        color: white;
+        position: absolute;
+        margin-top: 800px;
+        margin-left: 600px;
+    }
+}  
+
+
