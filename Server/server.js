@@ -2,7 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const RapidAPI = require('rapidapi-connect');
 const app = express();
-const cors = require('cors')
+const cors = require('cors');
+const dotenv = require('dotenv');
 const PORT = process.env.PORT || 8080;
 const rapid = new RapidAPI("default-application_5beda1abe4b0d1763ed6f67c", "fd1b0b7e-80a5-4887-9c1d-dd5af98e1ad6");
 
@@ -10,12 +11,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(cors());
 
-// app.all('/*', function (req, res, next) {
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//     res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE');
-//     next();
-// });
+dotenv.config(); 
+
+const PORT = process.env.PORT || 8080;
+
 
 ///////// GET Businesses ///////////
 
@@ -24,7 +23,7 @@ let businesses = [];
 app.post('/getbusinesses', (req, res)=>{  
     businesses = [];
     rapid.call('YelpAPI', 'getBusinesses', {
-        'accessToken': 'FlvnN46hij2ovHvyn1GqRMwl5TrGhHvq3hquKB-oBO_CNJxDbjA4qT2rojhqknM7kgn-1ec6HDamXIKhihz1cKpS4XA0I6K4LGMA2lKcBkHnqnxgs-g8HjJlqpntW3Yx',
+        'accessToken': process.env.YELP_ACCESS,
         ...req.body
         
         
@@ -44,7 +43,7 @@ app.get('/results', (req, res) =>{
 
 app.post('/getbusinessreviews', (req, res) => {
     rapid.call('YelpAPI', 'getBusinessReviews', {
-        'accessToken': 'FlvnN46hij2ovHvyn1GqRMwl5TrGhHvq3hquKB-oBO_CNJxDbjA4qT2rojhqknM7kgn-1ec6HDamXIKhihz1cKpS4XA0I6K4LGMA2lKcBkHnqnxgs-g8HjJlqpntW3Yx',
+        'accessToken': process.env.YELP_ACCESS,
         ...req.body
 
     }).on('success', (payload) => {
